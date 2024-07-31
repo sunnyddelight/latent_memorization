@@ -1,4 +1,4 @@
-for j in {110..120}
+for j in $(seq 120 10 350)
 do
     for i in {0..15}
     do

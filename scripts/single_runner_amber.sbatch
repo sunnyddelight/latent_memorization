@@ -9,11 +9,11 @@
 #SBATCH --gres=gpu:a100:1
 #SBATCH -p normal
 
-TRAIN_PATH=/om/user/sunnyd/workspace/pythia/predictable_memorization/scripts
+TRAIN_PATH=/om/user/sunnyd/workspace/latent_memorization/scripts
 source activate pythia
 
-export TRANSFORMERS_CACHE=/om/tmp/amber_cache
-export HF_DATASETS_CACHE="/om/tmp/amber"
+export TRANSFORMERS_CACHE=/om/user/sunnyd/amber_cache
+export HF_DATASETS_CACHE="/om/user/sunnyd/amber"
 export DATA_CHECKPOINT=100
 export CHECKPOINT=$1
 export JOB_ID=$2
