@@ -156,7 +156,7 @@ def main():
 
     # Model initialization
     model = LlamaForCausalLM.from_pretrained("LLM360/Amber", revision=f"ckpt_{CHECKPOINT}",
-        cache_dir=f"/om/tmp/amber_cache/"
+        cache_dir=f"/om2/user/sunnyd/amber_cache/"
     ).half().eval().cuda()
 
     # dist.barrier()

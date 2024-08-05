@@ -1,15 +1,15 @@
 import os
 import pandas as pd
 
-num_blocks = {i:16 for i in range(10000, 30001, 1000)}
+num_blocks = {i:16 for i in range(10000, 430001, 3000)}
 # num_blocks[7000] = 8
 # num_blocks[8000] = 8
 
 indices = set()
 num_remaining = []
 OFFSET = 10000 * 1024
-for CHECKPOINT in range(10000, 30001, 1000):
-    base_path = f'../results/memorization-dyn-count/evals-running/memorization_1b-v0_{CHECKPOINT}_{OFFSET}_lev'
+for CHECKPOINT in range(10000, 43001, 3000):
+    base_path = f'../results/memorization-dyn-count/evals-running/memorization_410m-deduped_{CHECKPOINT}_{OFFSET}_lev'
     total_num_sequences = 1000*1024
     block_size = total_num_sequences // num_blocks[CHECKPOINT]
     for RANK in range(num_blocks[CHECKPOINT]):
